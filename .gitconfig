@@ -29,3 +29,6 @@
 [user]
     name = Susan Tan
     email = susan@pistoncloud.com
+[color]
+	ui = true
+	diffi = true
