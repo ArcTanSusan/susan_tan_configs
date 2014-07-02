@@ -7,3 +7,8 @@ export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 
 alias copy='fc -ln -1 | awk '{$1=$1}1' | pbcopy '
+
+# Source the basrc when sshed into a VM
+if [ -f ~/.bashrc ]; then
+      . ~/.bashrc
+fi

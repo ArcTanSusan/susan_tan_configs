@@ -13,3 +13,5 @@ if [[ -r /etc/bash_completion.d/virtualenvwrapper ]]; then
 else
     echo "WARNING: Can't find virtualenvwrapper.sh"
 fi
+
+source ~/go_here.sh 
