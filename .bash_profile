@@ -12,3 +12,7 @@ alias copy='fc -ln -1 | awk '{$1=$1}1' | pbcopy '
 if [ -f ~/.bashrc ]; then
       . ~/.bashrc
 fi
+
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
