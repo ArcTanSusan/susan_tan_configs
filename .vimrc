@@ -34,5 +34,20 @@ set columns=80
 set laststatus=2
 set title
 
-'' set alias
+" Set alias
 let @i='oimport ipdb;ipdb.set_trace()'
+
+" Set title string and push it to xterm/screen window title
+set titlestring=%F%m%r%h
+set titlelen=70
+
+" Set pathogen
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+
+filetype plugin on
+" Set path of pydiction autocomplete python 
+let g:pydiction_location="/Users/susantan/.vim/bundle/pydiction/complete-dict"
+" Set menu height
+let g:pydiction_menu_height=9
