@@ -33,3 +33,6 @@ set columns=80
 " Always display the status line, even if only one window is displayed
 set laststatus=2
 set title
+
+'' set alias
+let @i='oimport ipdb;ipdb.set_trace()'
