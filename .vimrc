@@ -29,6 +29,8 @@ set ruler
 
 " Set num of columns that appear on screen
 set columns=80
+" Limit the width to 80 columns 
+set tw=80
 
 " Always display the status line, even if only one window is displayed
 set laststatus=2
