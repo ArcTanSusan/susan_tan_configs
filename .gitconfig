@@ -30,5 +30,21 @@
     name = Susan Tan
     email = susan@pistoncloud.com
 [color]
-	ui = true
-	diffi = true
+    ui = true
+    diffi = true
+    branch = auto
+    diff = auto
+    status = auto
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red
+    new = cyan
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
