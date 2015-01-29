@@ -65,15 +65,17 @@ let g:CommandTMaxHeight=20
 let g:CommandTMatchWindowAtTop=1
 let g:CommandTAcceptSelectionMap='<C-o>'
 let g:CommandTAcceptSelectionTabMap='<CR>'
+let g:CommandTHighlightColor='purple'
+let g:CommandTIgnoreCase=1
+let g:CommandTTMaxHeight=50
+let g:CommandTAlwaysShowDotFiles=1
+let g:CommandTScanDotDirectories=1
 
 " Vim bookmarks plugin
 highlight BookmarkSign ctermbg=NONE ctermfg=160
 highlight BookmarkLine ctermbg=194 ctermfg=NONE
 let g:bookmark_sign = '♥'
 let g:bookmark_highlight_lines = 1
-
-" I find myself using this code snippet far too often
-iabb IPDB import ipdbipdb.set_trace()
 
 "Set color colunn red at 80 chars
 set colorcolumn=80
