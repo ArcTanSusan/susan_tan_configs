@@ -34,9 +34,6 @@ set columns=80
 set laststatus=2
 set title
 
-" Set alias
-let @i='oimport ipdb;ipdb.set_trace()'
-
 " Set title string and push it to xterm/screen window title
 set titlestring=%F%m%r%h
 set titlelen=70
@@ -79,3 +76,9 @@ let g:bookmark_highlight_lines = 1
 
 "Set color colunn red at 80 chars
 set colorcolumn=80
+
+" Added vim-pathogen
+execute pathogen#infect()
+
+" Paste in ipdb debugger
+let @i='i import ipdb;ipdb.set_trace()'
