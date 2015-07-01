@@ -231,9 +231,6 @@ fi
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
-# Start at the savage repo and activate the virtualenv after login to VM
-source ~/go_here.sh 
-
 # bash_prompt
 # The various escape codes that we can use to color our prompt.
 RED="\[\033[0;31m\]"
@@ -319,3 +316,7 @@ PROMPT_COMMAND=set_bash_prompt
 =======
 source ~/.bash/git-prompt/gitprompt.sh
 PS1="\u@\h:\w\$(parse_git_branch_or_tag) $ "
+
+# Set editors to be vim, including git
+export VISUAL=vim
+export EDITOR="$VISUAL"
