@@ -77,8 +77,5 @@ let g:bookmark_highlight_lines = 1
 "Set color colunn red at 80 chars
 set colorcolumn=80
 
-" Added vim-pathogen
-execute pathogen#infect()
-
 " Paste in ipdb debugger
 let @i='i import ipdb;ipdb.set_trace()'
