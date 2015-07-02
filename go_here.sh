@@ -1,4 +1,4 @@
 #!/bin/sh
 
-cd /home/vagrant/work/savage
-workon savage
+cd ~/piston/rugen/savage
+workon rugen
