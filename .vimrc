@@ -79,3 +79,7 @@ set colorcolumn=80
 
 " Paste in ipdb debugger
 let @i='i import ipdb;ipdb.set_trace()'
+
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+set lines=100 columns=150
