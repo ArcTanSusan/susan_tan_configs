@@ -311,12 +311,19 @@ function set_bash_prompt () {
   PS1="${PYTHON_VIRTUALENV}${YELLOW}\w${COLOR_NONE} ${BRANCH}${PROMPT_SYMBOL} "
 }
 
-# Tell bash to execute this function just before displaying its prompt.
-PROMPT_COMMAND=set_bash_prompt
-=======
-source ~/.bash/git-prompt/gitprompt.sh
-PS1="\u@\h:\w\$(parse_git_branch_or_tag) $ "
+source ~/go_here.sh
 
 # Set editors to be vim, including git
 export VISUAL=vim
 export EDITOR="$VISUAL"
+
+export LANGUAGE=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
+export NVM_DIR="/Users/ArcTanSusan/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+alias 'proxmox17'="ssh -L 8555:0.0.0.0:8555 sustan@proxmox17.lab1.mc.metacloud.in -t ssh -D 8555 'mcp-02-rhel-7' 'bash'"
+
+alias 'horizon'="python manage.py collectstatic --clear --noinput && python manage.py compress --force && python manage.py runserver"
