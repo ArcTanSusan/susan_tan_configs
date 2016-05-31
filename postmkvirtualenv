@@ -6,3 +6,5 @@ pip install pdbpp
 pip install ipython
 pip install bpython
 pip install requests
+pip install autopep8
+pip install yapf
