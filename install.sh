@@ -17,6 +17,12 @@ curl -Sso ~/.vim/autoload/pathogen.vim \
 cd ~/.vim/bundle
 git clone https://github.com/wincent/Command-T.git
 
+# Install the Ctags vim plugin
+cd ~/.vim/bundle
+git clone https://github.com/szw/vim-tags.git
+sudo apt-get install exuberant-ctags
+
 # Install the metacloud dirs
 git clone https://github.com/metacloud/orbital.git
 cd orbital && cp .pylintrc ~/orbital/
+
