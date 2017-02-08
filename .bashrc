@@ -3,8 +3,9 @@
 # for examples
 
 alias dockerlogs='docker-compose logs -f --tail="all"'
-alias opusrepl='docker-compose run -rm opus python manage.py shell_plus'
-alias contentrepl='docker-compose run --rm content_service python manage.py shell_plus'
+alias opusrepl='docker-compose run opus python manage.py shell_plus --bpython'
+alias contentrepl='docker-compose run content_service python manage.py shell_plus --bpython'
+
 
 # If not running interactively, don't do anything
 case $- in
