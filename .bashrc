@@ -5,7 +5,8 @@
 alias dockerlogs='docker-compose logs -f --tail="all"'
 alias opusrepl='docker-compose run opus python manage.py shell_plus --bpython'
 alias contentrepl='docker-compose run content_service python manage.py shell_plus --bpython'
-
+alias contenttests='docker-compose run content_service py.test'
+alias opustests='docker-compose run opus py.test'
 
 # If not running interactively, don't do anything
 case $- in
