@@ -7,6 +7,9 @@ alias opusrepl='docker-compose run opus python manage.py shell_plus --bpython'
 alias contentrepl='docker-compose run content_service python manage.py shell_plus --bpython'
 alias contenttests='docker-compose run content_service py.test'
 alias opustests='docker-compose run opus py.test'
+alias pyflakes='git diff-tree --no-commit-id --name-only -r HEAD | grep .py | xargs -P 4 pyflakes'
+alias pylint='find . -type f -name \*.py \! -iregex '.*/docs.*' \! -iregex '.*/migrations.*' \! -iregex '.*/bepress_assets/.*' \! -iregex '.*/.env/.*' \! -iregex '.*/bower_components/.*' \! -iregex '.*/node_modules/.*' -print0 | xargs -P 4 -n 100 -0 \
+    pep8 --max-line-length=132'
 
 # If not running interactively, don't do anything
 case $- in
