@@ -1,5 +1,7 @@
-export PATH=/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/:/bin:/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:$PATH
-export EDITOR=vim 
+export PATH=/bin:/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:$PATH
+export EDITOR='subl -w'
+
+export PATH=/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl:/bin:/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:$PATH
 
 # ensure all new environments are isolated from the site-packages directory
 export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
@@ -16,3 +18,10 @@ fi
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
+
+# Git branch in prompt.
+parse_git_branch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
