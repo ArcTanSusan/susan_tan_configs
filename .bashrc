@@ -1,14 +1,14 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
-
+alias dc='docker-compose run -T'
 alias dockerlogs='docker-compose logs -f --tail="all"'
 alias opusrepl='docker-compose run opus python manage.py shell_plus --bpython'
 alias contentrepl='docker-compose run content_service python manage.py shell_plus --bpython'
 alias contenttests='docker-compose run content_service py.test'
 alias opustests='docker-compose run opus py.test'
 alias pyflakes='find . -name \*.py \! -iregex '.*/docs.*' \! -iregex '.*/migrations.*' \! -iregex '.*/bepress_assets/.*' \! -iregex '.*/.env/.*' \! -iregex '.*/bower_components/.*' \! -iregex '.*/node_modules/.*' -print0 | xargs -P 4 -n 100 -0 pyflakes'
-alias pylint='find . -type f -name \*.py \! -iregex '.*/docs.*' \! -iregex '.*/migrations.*' \! -iregex '.*/bepress_assets/.*' \! -iregex '.*/.env/.*' \! -iregex '.*/bower_components/.*' \! -iregex '.*/node_modules/.*' -print0 | xargs -P 4 -n 100 -0 \
+alias pylint='find . -type f -name \*.py \! -iregex '.*/docs.*' \! -iregex '.*/migrations.*' \! -iregex '.*../bepress_assets/.*' \! -iregex '.*/.env/.*' \! -iregex '.*/bower_components/.*' \! -iregex '.*/node_modules/.*' -print0 | xargs -P 4 -n 100 -0 \
     pep8 --max-line-length=132'
 
 # If not running interactively, don't do anything
@@ -331,8 +331,6 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 export NVM_DIR="/Users/ArcTanSusan/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
-alias 'proxmox17'="ssh -L 8555:0.0.0.0:8555 sustan@proxmox17.lab1.mc.metacloud.in -t ssh -D 8555 'mcp-02-rhel-7' 'bash'"
-
-alias 'horizon'="python manage.py collectstatic --clear --noinput && python manage.py compress --force && python manage.py runserver"
+# Autocomplete make commands
+complete -W "\`grep -oE '^[a-zA-Z0-9_-]+:([^=]|$)' Makefile | sed 's/[^a-zA-Z0-9_-]*$//'\`" make
