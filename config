@@ -1,0 +1,17 @@
+
+# --- SourceTree Generated ---
+Host ArcTanSusan-GitHub
+    HostName github.com
+    User ArcTanSusan
+    PreferredAuthentications publickey
+    IdentityFile /Users/stan/.ssh/ArcTanSusan-GitHub
+    UseKeychain yes
+    AddKeysToAgent yes
+# ----------------------------
+
+Host *.bdev.us *.bepress.com *.bepdev dev1 bdeely *.web *.util *.db *.svc *.xen
+    ForwardAgent yes
+    User stan
+
+Host *
+    User stan
