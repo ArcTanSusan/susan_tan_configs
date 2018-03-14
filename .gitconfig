@@ -5,8 +5,8 @@
     df = diff
     br = branch
     bn = !git for-each-ref --format='%(refname:short)' `git symbolic-ref HEAD`
-    fet = fetch piston
-    reb = rebase piston/master
+    fet = fetch upstream
+    reb = rebase upstream/master
     lc = log ORIG_HEAD.. --stat --no-merges
     undo = reset --hard
     pom = push origin master
@@ -28,7 +28,7 @@
     trustExitCode = true
 [user]
     name = Susan Tan
-    email = susan@pistoncloud.com
+    email = stan@bepress.com
 [color]
     ui = true
     diffi = true
