@@ -10,11 +10,6 @@ export PIP_VIRTUALENV_BASE=$WORKON_HOME
 
 alias copy='fc -ln -1 | awk '{$1=$1}1' | pbcopy '
 
-# Source the basrc when sshed into a VM
-if [ -f ~/.bashrc ]; then
-      . ~/.bashrc
-fi
-
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
@@ -24,4 +19,7 @@ parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
+export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\]"
+
+# Added by install_latest_perl_osx.pl
+[ -r /Users/tan4/.bashrc ] && source /Users/tan4/.bashrc
