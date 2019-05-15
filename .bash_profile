@@ -1,5 +1,11 @@
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/susantan/google-cloud-sdk/path.bash.inc' ]; then . '/Users/susantan/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/susantan/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/susantan/google-cloud-sdk/completion.bash.inc'; fi
 export PATH=/bin:/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:$PATH
-export EDITOR='subl -w'
+export EDITOR='atom -nw'
 
 export PATH=/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl:/bin:/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:$PATH
 
@@ -23,3 +29,4 @@ export PS1="\u@\h \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\]"
 
 # Added by install_latest_perl_osx.pl
 [ -r /Users/tan4/.bashrc ] && source /Users/tan4/.bashrc
+source ~/.bashrc
