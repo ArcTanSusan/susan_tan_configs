@@ -5,7 +5,7 @@ if [ -f '/Users/susantan/google-cloud-sdk/path.bash.inc' ]; then . '/Users/susan
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/susantan/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/susantan/google-cloud-sdk/completion.bash.inc'; fi
 export PATH=/bin:/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:$PATH
-export EDITOR='atom -nw'
+export EDITOR="code -w"
 
 export PATH=/bin:/sbin:/usr/bin:/usr/local/sbin:/usr/local/bin:$PATH
 
