@@ -7,6 +7,9 @@ Install BPython globally on mac
 --------------------------------------------
 pip install bpython --ignore-installed six --user
 
+Install automcompletion of commands
+--------------------------------------
+* Install oh my zsh: https://github.com/ohmyzsh/ohmyzsh
 
 Blog Post References
 ----------------------
