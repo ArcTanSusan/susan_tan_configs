@@ -7,9 +7,6 @@ Install BPython globally on mac
 --------------------------------------------
 pip install bpython --ignore-installed six --user
 
-Install git aware prompt
-----------------------------
-https://github.com/jimeh/git-aware-prompt
 
 Blog Post References
 ----------------------
