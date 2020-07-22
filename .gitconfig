@@ -1,3 +1,5 @@
+[url "git@github.com:"]
+  insteadOf = https://github.com/
 [alias]
     ci = commit
     st = status
@@ -5,8 +7,8 @@
     df = diff
     br = branch
     bn = !git for-each-ref --format='%(refname:short)' `git symbolic-ref HEAD`
-    fet = fetch upstream
-    reb = rebase upstream/v0
+    fet = fetch origin
+    reb = rebase origin/main
     lc = log ORIG_HEAD.. --stat --no-merges
     record = ! sh -c '(git add -p -- $@ && git commit) || git reset' --
     prune-all = !git remote | xargs -n 1 git remote prune
@@ -15,9 +17,9 @@
     today-all = !git all --since='12am'
     all-commiters = shortlog -s --
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
-
 [core]
     excludesfile = /Users/susan/.gitignore_global
+    editor = code --wait
 [user]
     name = Susan Tan
     email = susan@getwellio.com
@@ -41,4 +43,7 @@
     changed = green
     untracked = cyan
 [grep]
-	lineNumber = true
+    lineNumber = true
+[credential] 
+    helper = store
+
