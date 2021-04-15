@@ -8,10 +8,3 @@ export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
 export PIP_VIRTUALENV_BASE=$WORKON_HOME
 # makes pip detect an active virtualenv and install to it
 export PIP_RESPECT_VIRTUALENV=true
-if [[ -r /etc/bash_completion.d/virtualenvwrapper ]]; then
-    source /etc/bash_completion.d/virtualenvwrapper
-else
-    echo "WARNING: Can't find virtualenvwrapper.sh"
-fi
-
-source ~/go_here.sh 

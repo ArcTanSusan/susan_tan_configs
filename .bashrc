@@ -61,7 +61,7 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/repos/pozole/
+export PROJECT_HOME=$HOME/repos
 cd $PROJECT_HOME
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
